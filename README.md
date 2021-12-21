@@ -3,7 +3,7 @@ This script allows you to easily install local blast on your fedora (linux) devi
 
 This script is still work in progress!
 in the future it will support functionality to install all the databases available on https://ftp.ncbi.nlm.nih.gov/blast/db/.
-for now it is just the swissprot database.
+For now it is just the swissprot database.
 
 ## How to use:
 Make sure you have the latest python version installed on your linux device,
