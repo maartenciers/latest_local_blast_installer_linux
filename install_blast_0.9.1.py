@@ -70,7 +70,7 @@ if __name__ == '__main__':
     
     ### Global Variabels ###
     ncbi_folder = "ncbi-blast-2.12.0+"
-    home_directory = str(os.getcwd()+"/")
+    home_directory = str(os.getcwd()+"/") #os.environ['HOME']
     database_folder = str(home_directory+ncbi_folder+"/blastdb/db")
     bashrc = ".bashrc"
     ### --------------- ###
