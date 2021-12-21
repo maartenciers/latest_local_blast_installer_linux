@@ -42,7 +42,7 @@ def installingDatabases():
             sp.run(["wget","https://ftp.ncbi.nlm.nih.gov/blast/db/swissprot.tar.gz"])
             sp.run(["tar","-xzvf","swissprot.tar.gz"])
             sp.run(["rm","swissprot.tar.gz"])
-            sp.run("cd")
+            sp.run("cd") #seems to mallfunction why?
         except:
             print("Downloading swissprot database failed")
             exit()
@@ -55,12 +55,12 @@ def checkBashrc():
     strings = ['export PATH="'+home_directory+ncbi_folder+'/bin:$PATH"','export BLASTDB="'+database_folder+':$BLASTDB"']
 
     for i in strings:
-        check.append(stringInFile(bashrc,i))
+        check.append(stringInFile(home_directory+bashrc,i))
 
     if check == [True,True]:
         print("{} and {} are already added to path:\n".format(ncbi_folder+"/bin",database_folder))
     else:
-        appendToFile(bashrc,["\n","### BLAST ###\n",'export PATH="'+home_directory+ncbi_folder+'/bin:$PATH"\n','export BLASTDB="'+database_folder+':$BLASTDB"\n',"### ----- ###"])
+        appendToFile(home_directory+bashrc,["\n","### BLAST ###\n",'export PATH="'+home_directory+ncbi_folder+'/bin:$PATH"\n','export BLASTDB="'+database_folder+':$BLASTDB"\n',"### ----- ###"])
         print("Added Blast+ requirements to {} file".format(bashrc))
   
 if __name__ == '__main__':
