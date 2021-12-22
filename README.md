@@ -7,7 +7,8 @@ For now it is just the swissprot database.
 
 ## How to use:
 Make sure you have the latest python version installed on your linux device,
-and simply run the command: python3 install_blast_0.9.py
+and simply run the command: 
+$ python3 install_blast_0.9.1.py
 
 Modules needed are:
 - os
