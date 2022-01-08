@@ -1,5 +1,5 @@
 # latest_local_blast_installer_linux_fedora
-This script allows you to easily install local blast on your fedora (linux) device.
+This script allows you to easily install local blast on your linux device.
 
 This script is still work in progress!
 in the future it will support functionality to install all the databases available on https://ftp.ncbi.nlm.nih.gov/blast/db/.
