@@ -1,4 +1,4 @@
-# latest_local_blast_installer_linux_fedora
+# Blast+ for linux installer
 This script allows you to easily install local blast on your linux device.
 
 This script is still work in progress!
