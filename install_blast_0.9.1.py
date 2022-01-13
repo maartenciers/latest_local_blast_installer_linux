@@ -42,7 +42,7 @@ def installingDatabases():
             sp.run(["wget","https://ftp.ncbi.nlm.nih.gov/blast/db/swissprot.tar.gz"])
             sp.run(["tar","-xzvf","swissprot.tar.gz"])
             sp.run(["rm","swissprot.tar.gz"])
-            sp.run("cd") #seems to mallfunction why?
+            os.chdir(os.path.expanduser("~"))
         except:
             print("Downloading swissprot database failed")
             exit()
@@ -50,7 +50,7 @@ def installingDatabases():
         print("swissprot.pdb is already installed: Checking next step...")
     
 def checkBashrc():
-    sp.run("cd")
+    os.chdir(os.path.expanduser("~"))
     check = []
     strings = ['export PATH="'+home_directory+ncbi_folder+'/bin:$PATH"','export BLASTDB="'+database_folder+':$BLASTDB"']
 
@@ -65,7 +65,7 @@ def checkBashrc():
   
 if __name__ == '__main__':
 
-    sp.run("cd") # make sure the scripts starts in the home directory of the user
+    os.chdir(os.path.expanduser("~")) # make sure the scripts starts in the home directory of the user
     sp.run(["cp",".bashrc",".bashrc_old"]) #make backup just in case
     
     ### Global Variabels ###
